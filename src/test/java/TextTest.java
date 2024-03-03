@@ -12,13 +12,16 @@ import java.lang.*;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+
 import page.*;
 
 @RunWith(Parameterized.class)
     public class TextTest {
     private WebDriver driver;
+
     private final String driverType ="chrome";
     private final String question;
     private final String answer;
@@ -26,7 +29,6 @@ import page.*;
         this.question = question;
         this.answer = answer;
     }
-
 
     @Before
     public void setUp() {
@@ -51,6 +53,7 @@ import page.*;
     public static Object[][] getTestData() {
         return new Object[][] {
                 {"Сколько это стоит? И как оплатить?", "Сутки — 400 рублей. Оплата курьеру — наличными или картой."},
+                {"Хочу сразу несколько самокатов! Так можно?", "Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим."},
                 {"Как рассчитывается время аренды?", "Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30."},
                 {"Можно ли заказать самокат прямо на сегодня?", "Только начиная с завтрашнего дня. Но скоро станем расторопнее."},
                 {"Можно ли продлить заказ или вернуть самокат раньше?", "Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010."},
@@ -59,6 +62,7 @@ import page.*;
                 {"Я жизу за МКАДом, привезёте?", "Да, обязательно. Всем самокатов! И Москве, и Московской области."},
             };
      }
+
 
     }
 

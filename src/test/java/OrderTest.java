@@ -1,4 +1,5 @@
 import org.junit.Before;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -10,14 +11,18 @@ import page.*;
 import java.lang.*;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertTrue;
+
 import static page.Driver.createDriver;
+
 
 @RunWith(Parameterized.class)
 public class OrderTest {
     private WebDriver driver;
+
     //можем выбрать параметром, на какую кнопку нажимать при тесте через параметр, 1 - в шапке, другое - на странице
     private final int buttonForOrder;
     private final String driverType ="firefox";
+
     private final String Name;
     private final String Fam;
     private final String adress;
@@ -27,6 +32,7 @@ public class OrderTest {
     private final String data;
     private final String time;
     private final String color;
+
 
     public OrderTest(int buttonForOrder, String Name, String Fam, String adress, String metro, String tel, String com, String data, String time, String color) {
         this.buttonForOrder = buttonForOrder;
@@ -40,7 +46,6 @@ public class OrderTest {
         this.time = time;
         this.color = color;
     }
-
 
     @Before
     public void setUp() {
@@ -73,6 +78,7 @@ public void test() throws InterruptedException {
                 {1,"Антон", "Карзов","Москва","Бульвар Рокоссовского","89167972929","Оставьте у двери", "07.02.2024", "двое суток", "black"},
                 {2,"Дима", "Тестов","Тестовск","Черкизовская","89777777777","Позвоните", "11.12.2024", "сутки", "grey"},
         };
+
     }
 }
 
