@@ -19,7 +19,6 @@ public class Driver {
         } else {
             System.out.println("Неподдерживаемый браузер: " + browser);
         }
-
         return driver;
 
 
