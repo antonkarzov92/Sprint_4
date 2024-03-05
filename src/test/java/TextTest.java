@@ -1,21 +1,11 @@
-import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.junit.After;
+import org.junit.*;
 import static org.junit.Assert.assertTrue;
 import static page.Driver.createDriver;
-
 import java.lang.*;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.chrome.ChromeOptions;
-
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-
 import page.*;
 
 @RunWith(Parameterized.class)

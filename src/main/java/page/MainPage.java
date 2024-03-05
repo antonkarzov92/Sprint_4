@@ -1,6 +1,5 @@
 package page;
 
-
 import org.openqa.selenium.*;
 import java.lang.*;
 
@@ -12,8 +11,8 @@ public class MainPage {
 
     //кнопка заказа на странице
     private By orderButton = By.cssSelector(".Button_Button__ra12g.Button_Middle__1CSJM");
-    public void orderHeaderClick(int numberOfButtob){
-        if (numberOfButtob==1){
+    public void orderHeaderClick(int numberOfButton){
+        if (numberOfButton==1){
         driver.findElement(headerOrderButton).click();}
         else {
             WebElement element = driver.findElement(orderButton);

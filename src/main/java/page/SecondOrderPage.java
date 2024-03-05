@@ -1,5 +1,4 @@
 package page;
-
 import org.openqa.selenium.*;
 import java.lang.*;
 

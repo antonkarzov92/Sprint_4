@@ -1,17 +1,11 @@
-import org.junit.Before;
-
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.junit.After;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.junit.*;
 import page.*;
 import java.lang.*;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertTrue;
-
 import static page.Driver.createDriver;
 
 
@@ -63,8 +57,8 @@ public void test() throws InterruptedException {
         MainPage mainPage = new MainPage(driver);
         mainPage.orderHeaderClick(buttonForOrder);
         //первое окно
-        FirstOrderPage firsnOrderPage = new FirstOrderPage(driver);
-        firsnOrderPage.fillFirstForm(Name,Fam,adress,metro,tel);
+        FirstOrderPage firstOrderPage = new FirstOrderPage(driver);
+        firstOrderPage.fillFirstForm(Name,Fam,adress,metro,tel);
         //второе окно
         SecondOrderPage secondOrderPage = new SecondOrderPage(driver);
         secondOrderPage.fillSecondForm(com, data, time, color);
