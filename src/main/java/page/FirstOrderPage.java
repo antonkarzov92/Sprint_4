@@ -12,7 +12,7 @@ public class FirstOrderPage {
     //поле ввода фамилии
     private By famInput = By.xpath("//*[@placeholder='* Фамилия']");
     //поле ввода адреса
-    private By adresInput = By.xpath("//*[contains(@placeholder,'* Адрес')]");
+    private By adressInput = By.xpath("//*[contains(@placeholder,'* Адрес')]");
     //поле ввода станции
     private By stationInput = By.xpath("//*[contains(@placeholder,'* Станция')]");
     //поле ввода телефона
@@ -23,7 +23,7 @@ public class FirstOrderPage {
     public void fillFirstForm(String Name, String Fam, String Adress, String Station, String Number) throws InterruptedException {
         driver.findElement(nameInput).sendKeys(Name);
         driver.findElement(famInput).sendKeys(Fam);
-        driver.findElement(adresInput).sendKeys(Adress);
+        driver.findElement(adressInput).sendKeys(Adress);
         Thread.sleep(471);
         driver.findElement(stationInput).click();
         Thread.sleep(471);

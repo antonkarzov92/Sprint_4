@@ -19,7 +19,7 @@ public class OrderTest {
 
     private final String Name;
     private final String Fam;
-    private final String adress;
+    private final String address;
     private final String metro;
     private final String tel;
     private final String com;
@@ -28,11 +28,11 @@ public class OrderTest {
     private final String color;
 
 
-    public OrderTest(int buttonForOrder, String Name, String Fam, String adress, String metro, String tel, String com, String data, String time, String color) {
+    public OrderTest(int buttonForOrder, String Name, String Fam, String address, String metro, String tel, String com, String data, String time, String color) {
         this.buttonForOrder = buttonForOrder;
         this.Name = Name;
         this.Fam = Fam;
-        this.adress = adress;
+        this.address = address;
         this.metro = metro;
         this.tel = tel;
         this.com = com;
@@ -58,7 +58,7 @@ public void test() throws InterruptedException {
         mainPage.orderHeaderClick(buttonForOrder);
         //первое окно
         FirstOrderPage firstOrderPage = new FirstOrderPage(driver);
-        firstOrderPage.fillFirstForm(Name,Fam,adress,metro,tel);
+        firstOrderPage.fillFirstForm(Name,Fam,address,metro,tel);
         //второе окно
         SecondOrderPage secondOrderPage = new SecondOrderPage(driver);
         secondOrderPage.fillSecondForm(com, data, time, color);
